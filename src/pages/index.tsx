@@ -8,6 +8,8 @@ const Guruhlar = lazy(() => import("./dashboard/guruhlar"));
 const Oquvchilar = lazy(() => import("./dashboard/oquvchilar"));
 const Oqituvchilar = lazy(() => import("./dashboard/oqituvchilar"));
 const UpdateDirection = lazy(() => import("./dashboard/yonalishlar/yonalishlar_upd"));
+const CreateUser = lazy(() => import("./dashboard/oquvchilar/oquvchilar_add"));
+const UpdateUser = lazy(() => import("./dashboard/oquvchilar/oquvchilar_upd"));
 
 const MainRouters = () => {
     return (
@@ -18,12 +20,16 @@ const MainRouters = () => {
                     element: <Dashboard />,
                     children: [
                         {
+                            path: "",
+                            element: <Guruhlar />
+                        },
+                        {
                             path: "yonalishlar",
-                            element: <Yonalishlar />, 
+                            element: <Yonalishlar />,
                             children: [
-                                { 
+                                {
                                     path: "create",
-                                    element: <CreateDirection /> 
+                                    element: <CreateDirection />
                                 },
                                 {
                                     path: "update",
@@ -31,9 +37,24 @@ const MainRouters = () => {
                                 }
                             ]
                         },
-                        { path: "", element: <Guruhlar /> },
-                        { path: "oquvchilar", element: <Oquvchilar /> },
-                        { path: "oqituvchilar", element: <Oqituvchilar /> },
+                        {
+                            path: "oquvchilar",
+                            element: <Oquvchilar />,
+                            children: [
+                                {
+                                    path: "create",
+                                    element: <CreateUser />
+                                },
+                                {
+                                    path: "update",
+                                    element: <UpdateUser />
+                                }
+                            ]
+                        },
+                        {
+                            path: "oqituvchilar",
+                            element: <Oqituvchilar />
+                        },
                     ],
                 },
             ])}
