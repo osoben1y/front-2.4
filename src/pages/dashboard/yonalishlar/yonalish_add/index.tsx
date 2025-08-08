@@ -15,7 +15,7 @@ const CreateDirection = () => {
   return (
     <>
       <Toaster />
-      <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex items-center justify-center z-50 px-4">
+      <div className="fixed inset-0  bg-opacity-30 backdrop-blur-sm flex items-center justify-center z-50 px-4">
         <div className="bg-white rounded-lg p-6 w-full max-w-md space-y-4 shadow-lg animate-fade-in">
           <h3 className="text-lg font-semibold text-gray-800">Yo'nalish qo‘shish</h3>
           <input
