@@ -7,6 +7,7 @@ const Yonalishlar = lazy(() => import("./dashboard/yonalishlar"));
 const Guruhlar = lazy(() => import("./dashboard/guruhlar"));
 const Oquvchilar = lazy(() => import("./dashboard/oquvchilar"));
 const Oqituvchilar = lazy(() => import("./dashboard/oqituvchilar"));
+const UpdateDirection = lazy(() => import("./dashboard/yonalishlar/yonalishlar_upd"));
 
 const MainRouters = () => {
     return (
@@ -24,6 +25,10 @@ const MainRouters = () => {
                                     path: "create",
                                     element: <CreateDirection /> 
                                 },
+                                {
+                                    path: "update",
+                                    element: <UpdateDirection />
+                                }
                             ]
                         },
                         { path: "", element: <Guruhlar /> },
