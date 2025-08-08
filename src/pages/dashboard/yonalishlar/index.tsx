@@ -38,7 +38,7 @@ const Yonalishlar = () => {
 
       <div className="flex items-center justify-between">
         <h2 className="text-xl font-semibold text-gray-800">
-          Yonalishlar{' '}
+          Yonalishlar{}
           <span className="text-sm text-gray-500">({directions.length} ta)</span>
         </h2>
         <button
